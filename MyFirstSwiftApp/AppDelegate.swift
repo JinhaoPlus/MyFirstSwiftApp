@@ -17,7 +17,7 @@ extension Double {
         if result == nil {
             return "FORMAT FAILURE!"
         }
-        return result! // 拆封可选变量 }
+        return result! // 拆封可选变量
     }
 }
 
@@ -32,6 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var resultsField : NSTextField!
     
     var simpleInterestCalculator : SimpleInterest = SimpleInterest()
+    var compoundInterestCalculator : CompoundInterest = CompoundInterest()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
@@ -43,10 +44,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         print("I am terminating")
     }
 
-    @IBAction func buttonClicked(sender : NSButton) {
+    @IBAction func calculateSimpleButtonClicked(sender : NSButton) {
         var result : Double
         
         result = simpleInterestCalculator.calculate(loanAmount : loanAmountField.doubleValue, interestRate : interestRateField.doubleValue, years : yearsField.integerValue)
+        self.resultsField.stringValue = result.dollars
+    }
+    
+    @IBAction func calculateCompoundButtonClicked(sender : NSButton) {
+        var result : Double
+        
+        result = compoundInterestCalculator.calculate(loanAmount : loanAmountField.doubleValue, interestRate : interestRateField.doubleValue, years : yearsField.integerValue)
         self.resultsField.stringValue = result.dollars
     }
 }

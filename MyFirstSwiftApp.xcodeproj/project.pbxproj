@@ -13,6 +13,7 @@
 		6E3AB8C4200E47FF009EC1DF /* MyFirstSwiftAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3AB8C3200E47FF009EC1DF /* MyFirstSwiftAppTests.swift */; };
 		6E3AB8CF200F96A0009EC1DF /* SimpleInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3AB8CE200F96A0009EC1DF /* SimpleInterest.swift */; };
 		6E3AB8D0200F96A0009EC1DF /* SimpleInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3AB8CE200F96A0009EC1DF /* SimpleInterest.swift */; };
+		CF437E922014762800DEBDC6 /* CompoundInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF437E912014762800DEBDC6 /* CompoundInterest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,6 +23,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 6E3AB8AE200E47FF009EC1DF;
 			remoteInfo = MyFirstSwiftApp;
+		};
+		CF437E9520147E5B00DEBDC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3AB8A7200E47FE009EC1DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E3AB8BE200E47FF009EC1DF;
+			remoteInfo = MyFirstSwiftAppTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -36,6 +44,7 @@
 		6E3AB8C3200E47FF009EC1DF /* MyFirstSwiftAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirstSwiftAppTests.swift; sourceTree = "<group>"; };
 		6E3AB8C5200E47FF009EC1DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E3AB8CE200F96A0009EC1DF /* SimpleInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleInterest.swift; sourceTree = "<group>"; };
+		CF437E912014762800DEBDC6 /* CompoundInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundInterest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +92,7 @@
 				6E3AB8CE200F96A0009EC1DF /* SimpleInterest.swift */,
 				6E3AB8B9200E47FF009EC1DF /* Info.plist */,
 				6E3AB8BA200E47FF009EC1DF /* MyFirstSwiftApp.entitlements */,
+				CF437E912014762800DEBDC6 /* CompoundInterest.swift */,
 			);
 			path = MyFirstSwiftApp;
 			sourceTree = "<group>";
@@ -110,6 +120,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				CF437E9620147E5B00DEBDC6 /* PBXTargetDependency */,
 			);
 			name = MyFirstSwiftApp;
 			productName = MyFirstSwiftApp;
@@ -198,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF437E922014762800DEBDC6 /* CompoundInterest.swift in Sources */,
 				6E3AB8B3200E47FF009EC1DF /* AppDelegate.swift in Sources */,
 				6E3AB8CF200F96A0009EC1DF /* SimpleInterest.swift in Sources */,
 			);
@@ -219,6 +231,11 @@
 			isa = PBXTargetDependency;
 			target = 6E3AB8AE200E47FF009EC1DF /* MyFirstSwiftApp */;
 			targetProxy = 6E3AB8C0200E47FF009EC1DF /* PBXContainerItemProxy */;
+		};
+		CF437E9620147E5B00DEBDC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E3AB8BE200E47FF009EC1DF /* MyFirstSwiftAppTests */;
+			targetProxy = CF437E9520147E5B00DEBDC6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

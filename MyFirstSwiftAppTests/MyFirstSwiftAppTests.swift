@@ -11,6 +11,9 @@ import XCTest
 
 class MyFirstSwiftAppTests: XCTestCase {
     
+    var mySimpleInterestCalculator: SimpleInterest = SimpleInterest()
+    var myCompoundInterestCalculator: CompoundInterest = CompoundInterest()
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -21,9 +24,17 @@ class MyFirstSwiftAppTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSimpileInterest() {
+        // 这是一个功能测试用例
+        var result: Double
+        result = mySimpleInterestCalculator.calculate(loanAmount: 25_000, interestRate: 0.08, years: 10)
+        XCTAssertEqual(result, 45000, accuracy: 0.1, "Unexpected result: \(result)")
+    }
+    
+    func testCompoundInterest() {
+        var result: Double
+        result = myCompoundInterestCalculator.calculate(loanAmount: 25_000, interestRate: 0.08, years: 10)
+        XCTAssertEqual(result, 53973.12, accuracy: 0.1, "Unexpected result: \(result)")
     }
     
     func testPerformanceExample() {

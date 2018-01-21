@@ -10,8 +10,8 @@ import Foundation
 
 class SimpleInterest {
     func calculate(loanAmount : Double, interestRate : Double, years : Int) -> Double {
-        var realInterestRate = interestRate / 100.0
-        realInterestRate = Double(years) * realInterestRate * loanAmount
-        return loanAmount + realInterestRate
+//        let realInterestRate = interestRate / 100.0
+        let interest = Double(years) * interestRate * loanAmount
+        return loanAmount + interest
     }
 }
